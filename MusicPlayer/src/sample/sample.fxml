@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <BorderPane prefHeight="446.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane prefHeight="700.0" prefWidth="208.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="muavi" fitHeight="145.0" fitWidth="154.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true" x="25.0">
+                     <image>
+                        <Image url="@../../../../Desktop/mauvi12.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="choose" layoutX="10.0" layoutY="279.0" mnemonicParsing="false" onAction="#openSongMenu" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: black;" text="    Choose File" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="user" fitHeight="102.0" fitWidth="87.0" layoutX="61.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/avatar-366-456318.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="66.0" layoutY="170.0" prefHeight="29.0" prefWidth="78.0" text="KRRITHEN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="musicbtn" layoutX="10.0" layoutY="328.0" mnemonicParsing="false" onAction="#music" prefHeight="30.0" prefWidth="141.0" style="-fx-background-color: black;" text="    Music " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="videobtn" layoutX="10.0" layoutY="379.0" mnemonicParsing="false" onAction="#video" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: black;" text="    Video" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ytbtn" layoutX="21.0" layoutY="430.0" mnemonicParsing="false" onAction="#ytbutton" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: black;" text="    Youtube" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="closeyt" layoutX="59.0" layoutY="466.0" mnemonicParsing="false" onAction="#closeweb" prefHeight="16.0" prefWidth="78.0" style="-fx-background-color: black;" text="Close" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </left>
+         <bottom>
+            <Pane prefHeight="140.0" prefWidth="1000.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Slider fx:id="timeslider" layoutX="250.0" layoutY="75.0" prefHeight="25.0" prefWidth="803.0" />
+                  <Button fx:id="playbutton1" layoutX="97.0" layoutY="67.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: black;" />
+                  <Button fx:id="nextBtnn" layoutX="158.0" layoutY="73.0" mnemonicParsing="false" onAction="#nextbuttonclick" style="-fx-background-color: black;" />
+                  <Button fx:id="prebtnn" layoutX="49.0" layoutY="73.0" mnemonicParsing="false" onAction="#prebuttonclick" prefHeight="13.0" prefWidth="7.0" style="-fx-background-color: black;" />
+                  <Text fx:id="nametext" fill="#fcf8f8" layoutX="255.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a file to play" wrappingWidth="602.13671875">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="80.0" layoutY="30.0" prefHeight="32.0" prefWidth="92.0" text="Now Playing" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="volumeslider" layoutX="913.0" layoutY="47.0" max="10.0" />
+                  <Label layoutX="877.0" layoutY="44.0" text="Vol :" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </bottom>
+         <top>
+            <Pane prefHeight="39.0" prefWidth="1100.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="infobtn" layoutX="988.0" layoutY="5.0" mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: black;" text="  INFO " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+         </top>
+         <center>
+            <Pane prefHeight="412.0" prefWidth="860.0" style="-fx-background-color: #090a0a;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="backimg" fitHeight="262.0" fitWidth="528.0" layoutX="300.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/mainimg.png" />
+                     </image>
+                  </ImageView>
+                  <MediaView fx:id="mediaView" fitHeight="500.0" fitWidth="830.0" layoutX="23.0" layoutY="10.0" />
+                  <WebView fx:id="youtube" layoutX="3.0" layoutY="-1.0" opacity="0.0" prefHeight="530.0" prefWidth="871.0" />
+                  <Text fx:id="textview" fill="WHITE" fontSmoothingType="LCD" layoutX="623.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" MUAVI - Music And VIdeo Player&#10;&#10;Muavi is a Modren Flat-UI designed MEDIA PLAYER made for the easy access of media files and also featuring in-window direct access to YOUTUBE for uninterrupted entertainment .&#10; &#10;USER GUIDE :&#10;Choose File - opens file explorer     &#10;Music - opens music folder directly&#10;Video - opens video folder directly&#10;Youtube - opens youtube webview&#10;Close - closes youtube webview      &#10;Forward - skips 10 secs                    &#10;Backward - rewinds 10 secs             &#10;Play / Pause - as usual                      &#10;Slider Control - provided                 &#10;&#10;Click on info again to exit info view&#10;&#10;Developed by :&#10;KRRITHEN&#10;" textAlignment="CENTER" wrappingWidth="236.13671875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </center>
+         <right>
+            <Pane prefHeight="521.0" prefWidth="18.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
